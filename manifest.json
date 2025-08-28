@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Gradescope Duedate",
+    "description": "Changes default Gradescope behavior to rank assignments by most time-sensitive first.",
+    "version": "0.1",
+    "content_scripts": [
+        {
+            "js": [
+                "rerank.js"
+            ],
+            "matches": [
+                "https://www.gradescope.com/courses/*"
+            ]
+        }
+    ]
+}
