@@ -4,7 +4,10 @@ window.addEventListener('load', function() {
         if (data.showCompleted === undefined) {
             Array.from(document.getElementsByClassName("submissionStatus-complete")).forEach((el)=>{el.closest("tr").style.display="none"});
         } else {
-            Array.from(document.getElementsByClassName("submissionStatus-complete")).forEach((el)=>{el.closest("tr").style.display=((data.showCompleted) ? "" : "none")});
+            // Array.from(document.getElementsByClassName("submissionStatus-complete")).forEach((el)=>{el.closest("tr").style.display=((data.showCompleted) ? "" : "none")});
+            if (data.showCompleted === false) {
+                Array.from(document.getElementsByClassName("submissionStatus-complete")).forEach((el)=>{el.closest("tr").style.display="none"});
+            }
         }
     })
 });
